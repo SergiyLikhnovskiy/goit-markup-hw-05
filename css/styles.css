@@ -570,6 +570,8 @@ img {
   margin-bottom: 8px;
   padding: 0;
 }
+.form-line--texteria{
+margin-bottom: 16px;}
 
 .modal-input-card {
   position: relative;
@@ -695,7 +697,6 @@ img {
   margin: auto;
   background: #4d5ae5;
   border: none;
-
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
@@ -763,7 +764,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  min-height: 165px;
+  min-height: 40px;
   border-radius: 4px;
   gap: 16px;
   background: #4d5ae5;
