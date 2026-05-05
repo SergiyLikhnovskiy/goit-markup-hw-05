@@ -442,7 +442,12 @@ footer .social-link:focus {
 .footer-form {
   margin: 0 auto;
 }
+.footer-form-subsribe {
+  display: flex;
+  gap: 24px;
+}
 .footer-subscribe-text {
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
@@ -462,9 +467,6 @@ footer .social-link:focus {
 .subscribe-input:focus {
   border-color: #31d0aa;
 }
-.footer-form-subsribe {
-  display: flex;
-}
 .subscribe-input::placeholder {
   font-size: 12px;
   line-height: 2;
@@ -474,6 +476,9 @@ footer .social-link:focus {
 .subscribe-button {
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -483,10 +488,9 @@ footer .social-link:focus {
   border-radius: 4px;
   padding-block: 8px;
   padding-inline: 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
-  margin-left: 24px;
   gap: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -496,7 +500,9 @@ footer .social-link:focus {
 }
 .subscribe-icon {
   fill: #fff;
+  margin-left: 16px;
 }
+/* modal */
 .backdrop {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
@@ -508,7 +514,9 @@ footer .social-link:focus {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -523,10 +531,18 @@ footer .social-link:focus {
   background-color: #fcfcfc;
   border-radius: 4px;
   width: 408px;
+  min-height: 584px;
   padding: 72px 24px 24px 24px;
+  box-shadow:
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-close {
   position: absolute;
+  padding: 0;
+  cursor: pointer;
   top: 24px;
   right: 24px;
   width: 24px;
@@ -537,9 +553,10 @@ footer .social-link:focus {
   border-radius: 50%;
   fill: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
   transition:
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
@@ -551,7 +568,7 @@ footer .social-link:focus {
 .button-close:focus {
   background-color: #404bbf;
   border-color: #404bbf;
-  cursor: pointer;
+  border: none;
 }
 .button-close:hover .icon-close,
 .button-close:focus .icon-close {
@@ -571,6 +588,7 @@ footer .social-link:focus {
   display: block;
   margin-bottom: 4px;
   font-weight: 400;
+  line-height: 1.17;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -584,6 +602,8 @@ footer .social-link:focus {
   height: 40px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
 }
 .input-text:focus {
   border-color: #4d5ae5;
@@ -607,11 +627,13 @@ footer .social-link:focus {
 }
 .modal-comment-text {
   margin-bottom: 4px;
+  line-height: 1.17;
   display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
+  background-color: transparent;
   color: #8e8f99;
 }
 .model-comment {
@@ -659,9 +681,11 @@ footer .social-link:focus {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  fill: transparent;
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-link {
   line-height: 1.33333;
@@ -674,10 +698,11 @@ footer .social-link:focus {
   pointer-events: auto;
 }
 .modal-check:checked + .policy .modal-check-span {
-  background-color: #4d5ae5;
+  background-color: #404bbf;
+  border: none;
 }
 .modal-check:checked + .policy .modal-check-icon {
-  fill: #fff;
+  fill: #f4f4fd;
   opacity: 1;
 }
 .modal-button-send {
