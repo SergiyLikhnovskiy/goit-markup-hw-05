@@ -594,11 +594,10 @@ footer .social-link:focus {
 }
 .modal-form-label {
   margin-bottom: 4px;
-  line-height: 1.17;
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   background-color: transparent;
   color: #8e8f99;
@@ -673,7 +672,7 @@ footer .social-link:focus {
   color: #4d5ae5;
 }
 .policy {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 8px;
   font-size: 12px;
@@ -682,6 +681,7 @@ footer .social-link:focus {
   color: #8e8f99;
 }
 .modal-check-span {
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
   display: inline-flex;
